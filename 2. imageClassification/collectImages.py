@@ -26,7 +26,7 @@ while webcam.isOpened():
 
     if sample_num == 8:
         captured_num = captured_num + 1
-        # 폴더를 먼저 만들어 놓아야 저장이 됨
+        # 폴더를 먼저 만들어 놓아야 저장이 됨, 폴더 안에 기존 사진은 모두 삭제
         cv2.imwrite('./ob1/img'+str(captureㄴd_num)+'.jpg', frame) # 첫번째 이미지 수집시
         # cv2.imwrite('./ob2/img'+str(captured_num)+'.jpg', frame) # 두번째 이미지 수집시
         # cv2.imwrite('./ob3/img'+str(captured_num)+'.jpg', frame) # 세번째 이미지 수집시
