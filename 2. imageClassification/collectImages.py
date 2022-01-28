@@ -24,12 +24,12 @@ while webcam.isOpened():
     # display output
     cv2.imshow("captured frames", frame)
 
-    if sample_num == 4:
+    if sample_num == 8:
         captured_num = captured_num + 1
         # 폴더를 먼저 만들어 놓아야 저장이 됨
-        cv2.imwrite('./rock/img'+str(captured_num)+'.jpg', frame) # 바위 이미지 수집시
-        # cv2.imwrite('./paper/img'+str(captured_num)+'.jpg', frame) # 보 이미지 수집시
-        # cv2.imwrite('./scissors/img'+str(captured_num)+'.jpg', frame) # 가위 이미지 수집시
+        cv2.imwrite('./ob1/img'+str(captureㄴd_num)+'.jpg', frame) # 첫번째 이미지 수집시
+        # cv2.imwrite('./ob2/img'+str(captured_num)+'.jpg', frame) # 두번째 이미지 수집시
+        # cv2.imwrite('./ob3/img'+str(captured_num)+'.jpg', frame) # 세번째 이미지 수집시
         sample_num = 0
 
 
