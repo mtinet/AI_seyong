@@ -9,6 +9,14 @@ from PIL import ImageFont, ImageDraw, Image
 model = load_model('model.h5')
 model.summary()
 
+# 레이블 가져오기
+labels=[]
+f=open("labels.txt", "r")
+for x in f:
+     labels.append(x.rstrip('\n'))
+label_count = len(labels)
+f.close()
+
 # open webcam (웹캠 열기)
 webcam = cv2.VideoCapture(0)
 
@@ -40,20 +48,33 @@ while webcam.isOpened():
     prediction = model.predict(x)
     predicted_class = np.argmax(prediction[0]) # 예측된 클래스 0, 1, 2
 
-    if predicted_class == 0:
-        me = "왼손"
-    elif predicted_class == 1:
-        me = "오른손"
-    elif predicted_class == 2:
-        me = "가만히"
+    # 글씨 넣기 준비
+    font = cv2.FONT_HERSHEY_TRIPLEX
+    fontScale = 1
+    fontColor = (0,255,0)
+    lineThickness = 1
+
+    # 표기 문구 초기화
+    scoreLabel = 0
+    score = 0
+    result = ''
+
+    for x in range(0, label_count):
+        #예측값 모니터링
+        line=('%s=%0.0f' % (labels[x], int(round(prediction[0][x]*100)))) + "%"
+        cv2.putText(frame, line, (10,(x+1)*35), font, fontScale, fontColor, lineThickness)
+
+        # 가장 높은 예측 찾기
+        if score < prediction[0][x]:
+            scoreLabel = labels[x]
+            score = prediction[0][x]
+            result = str(scoreLabel) + " : " + str(score)
+            # print(result)
+
+    # 최고 결과치 보여주기
+    frame = cv2.putText(frame, result, (10, int(label_count+1)*35), font, 1, (0, 0, 255), 1, cv2.LINE_AA)
 
     # display
-    fontpath = "font/gulim.ttc"
-    font1 = ImageFont.truetype(fontpath, 100)
-    frame_pil = Image.fromarray(frame)
-    draw = ImageDraw.Draw(frame_pil)
-    draw.text((50, 50), me, font=font1, fill=(0, 0, 255, 3))
-    frame = np.array(frame_pil)
     cv2.imshow('imageClassficator', frame)
 
 
