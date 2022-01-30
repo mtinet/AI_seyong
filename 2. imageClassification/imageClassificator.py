@@ -39,9 +39,6 @@ while webcam.isOpened():
 
     prediction = model.predict(x)
     predicted_class = np.argmax(prediction[0]) # 예측된 클래스 0, 1, 2
-    print(np.round(prediction[0], 2))
-    print(predicted_class)
-
 
     if predicted_class == 0:
         me = "왼손"
@@ -58,6 +55,11 @@ while webcam.isOpened():
     draw.text((50, 50), me, font=font1, fill=(0, 0, 255, 3))
     frame = np.array(frame_pil)
     cv2.imshow('RPS', frame)
+
+
+    if cv2.waitKey(1) & 0xFF == ord('s'):
+        print(np.round(prediction[0], 2))
+        print(predicted_class)
 
     # press "Q" to stop
     if cv2.waitKey(1) & 0xFF == ord('q'):
