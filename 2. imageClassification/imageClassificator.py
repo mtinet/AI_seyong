@@ -25,6 +25,13 @@ while webcam.isOpened():
     if not status:
         break
 
+    # 이미지 높이, 폭 추출
+    h = frame.shape[0]
+    w = frame.shape[1]
+
+    # 이미지를 teachable machine이 학습할 때 사용하는 이미지 비율로 크롭
+    frame = frame[0:h, int((w-h)/2):int(w-((w-h)/2))]
+
     img = cv2.resize(frame, (224, 224), interpolation = cv2.INTER_AREA)
     x = img_to_array(img)
     x = np.expand_dims(x, axis=0)
@@ -37,11 +44,11 @@ while webcam.isOpened():
 
 
     if predicted_class == 0:
-        me = "가만히"
-    elif predicted_class == 1:
         me = "왼손"
-    elif predicted_class == 2:
+    elif predicted_class == 1:
         me = "오른손"
+    elif predicted_class == 2:
+        me = "가만히"
 
     # display
     fontpath = "font/gulim.ttc"

@@ -17,8 +17,8 @@ file_list3 = os.listdir(path_dir3)
 
 #%% train용 이미지 준비
 num = 0;
-train_img = np.float32(np.zeros((210, 224, 224, 3))) # 첫번째 칸이 사진 전체 갯수
-train_label = np.float64(np.zeros((210, 1)))
+train_img = np.float32(np.zeros((206, 224, 224, 3))) # 첫번째 칸이 사진 전체 갯수
+train_label = np.float64(np.zeros((206, 1))) # 첫번째 칸이 사진 전체 갯수
 
 for img_name in file_list1:
     img_path = path_dir1+img_name
@@ -75,6 +75,8 @@ base_model.summary()
 print("Number of layers in the base model: ", len(base_model.layers))
 
 GAP_layer = GlobalAveragePooling2D()
+
+# Dense 뒤에 오는 첫번째 파라미터 숫자가 분류할 수 있는 종류의 숫자임
 dense_layer = Dense(3, activation=tf.nn.softmax)
 
 model = Sequential([
