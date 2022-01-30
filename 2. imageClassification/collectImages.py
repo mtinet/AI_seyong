@@ -23,6 +23,7 @@ while webcam.isOpened():
 
     # display output
     cv2.imshow("captured frames", frame)
+    frame = frame[0:h, int((w-h)/2):int(w-((w-h)/2))]
 
     if sample_num == 8:
         captured_num = captured_num + 1
