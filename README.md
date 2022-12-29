@@ -1,31 +1,39 @@
 # 세용
 
-## 라이브러리 설치
-```python
-pip install tensorflow
-```
+## python 설치(3.8버전으로 설치할 것)
+[python 3.8.10 다운로드 링크](https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe)  
 
+## 기본 라이브러리 설치(torch, torchvision을 최신 버전으로 설치하면 소스코드 일부를 수정해야 함)
 ```python
-pip install cvlib
-```
-
-```python
+python.exe -m pip install --upgrade pip
+pip install numpy
+pip install opencv-python
+pip install pillow
+pip install matplotlib
+pip install easydict
+pip install flask
+pip install torch
+pip install torchvision
+pip install pandas
+pip install pyyaml
+pip install tqdm
+pip install seaborn
+pip install wget
 pip install pyserial
 ```
 
-여기부터는 음성 추가용, 추후 옵션으로 사용할 예정
+## 옵션 라이브러리 설치(여기부터는 음성 추가용, 추후 옵션으로 사용할 예정)
 ```python
 pip install pip install speechrecognition
-```
-
-```python
 pip install pip install gtts
-```
-
-```python
 pip install pip install playsound
 ```
 
+## 오류메시지
+### 아두이노 우노를 USB포트에 연결하지 않음
+```python
+serial.serialutil.SerialException: could not open port '': FileNotFoundError(2, '지정된 경로를 찾을 수 없습니다.', None, 3)
+```
 
 ##
 ## 인공지능
@@ -82,9 +90,4 @@ pyinstaller -w -F --icon=logo.ico maskDetector.py
 
 - 실행 파일을 만들고 실행파일 폴더 안에 model.h5 파일, cvlib, cvlib-0.2.6.dist-info폴더를 복사해 넣어야 함
 
-##
-## 오류메시지
-### 아두이노 우노를 USB포트에 연결하지 않음
-```python
-serial.serialutil.SerialException: could not open port '': FileNotFoundError(2, '지정된 경로를 찾을 수 없습니다.', None, 3)
-```
+
