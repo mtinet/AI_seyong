@@ -69,7 +69,8 @@ python kiosk.py
 ![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/67a8385e-1776-437d-aeb3-a867167b340c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221230%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221230T014925Z&X-Amz-Expires=86400&X-Amz-Signature=c01a2070607bcfe8681bc45a5861b6e20e8e4cb5cf5b269d2580b4f8a2e404b3&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
 
-### 7. 아두이노 코드가 설치되어 있는 폴더로 이동한다. 
+### 7. 여닫이 문을 자동제어 하려면, 아두이노 코드가 설치되어 있는 폴더로 이동한다. 
+현재 자동으로 문이 열리는 부분은 주석처리 되어 있으므로, 이 기능을 살리려면 kiosk.py 파이썬 프로그램의 28~36번째 줄, 216번 줄을 주석해제하고 사용할 것
 ```cmd
 cd C:\<시스템이 설치되어 있는 주소>\AI_seyong-main\3. kiosk\doorOpenClose_python
 ```
