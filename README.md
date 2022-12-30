@@ -3,7 +3,8 @@
 ## python 설치(3.8버전으로 설치할 것)
 [python 3.8.10 다운로드 링크](https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe)  
 
-## 기본 라이브러리 설치(torch, torchvision을 최신 버전으로 설치하면 소스코드 일부를 수정해야 함)
+## 기본 라이브러리 설치  
+(torch, torchvision을 최신 버전으로 설치하면 소스코드 일부를 수정해야 함)
 ```python
 python.exe -m pip install --upgrade pip
 pip install numpy
