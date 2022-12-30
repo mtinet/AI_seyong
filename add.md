@@ -36,3 +36,5 @@ pip install pip install playsound
 serial.serialutil.SerialException: could not open port '': FileNotFoundError(2, '지정된 경로를 찾을 수 없습니다.', None, 3)
 ```
 
+## cmd와 폴더 이동
+### 1. 설치 되어 있는 
