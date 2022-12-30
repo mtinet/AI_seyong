@@ -1,4 +1,4 @@
-# 프로그램 설치 및 사용 방법
+# 프로그램 설치 방법
 
 ## python 설치(3.8버전으로 설치할 것)
 [python 3.8.10 다운로드 링크](https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe)  
@@ -30,7 +30,9 @@ pip install pip install gtts
 pip install pip install playsound
 ```
 
+# 프로그램 사용 방법
 ## 오류메시지
+### 파이썬을 이용해 사용하는 라이브러리들이 제대로 설치가 되어 있지 않아서 발생하는 오류가 가장 많음. 위에 제시한 모든 라이브러리들이 제대로 설치되어 있어야 함
 ### 자동문을 여닫는 용도의 아두이노 우노를 USB포트에 연결하지 않았을 경우 이런 오류가 발생함, 연결하면 해결됨
 ```python
 serial.serialutil.SerialException: could not open port '': FileNotFoundError(2, '지정된 경로를 찾을 수 없습니다.', None, 3)
