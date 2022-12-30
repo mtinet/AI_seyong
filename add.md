@@ -60,6 +60,6 @@ python kiosk.py
 ### 6. 명령프롬프트 창의 위치를 적당히 조정하고, 클라이언트 프로그램에서 결제하기 버튼을 눌러 결과를 확인함
 #### 주의사항
 - 하드웨어 세팅이 잘 되어 있지 않으면 결과물을 확인할 수 없음
-- 카메라 두 대의 위치와 각도, 결과물로 보여지는 y축의 정렬이 정확해야 원하는 값을 얻을 수 있으므로, 하드웨어 세팅이 매우 중요함
-https://www.notion.so/samlab/6-AI-b210424ec06a49db87b7b554188053a4#df8d90604517487fa5c79994a831f9aa
+- 카메라 두 대의 위치와 각도, 결과물로 보여지는 y축의 정렬이 정확해야 원하는 값을 얻을 수 있으므로, 하드웨어 세팅이 매우 중요함  
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/291fadee-88fa-448d-81c6-3d0405172606/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221230%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221230T014219Z&X-Amz-Expires=86400&X-Amz-Signature=a01cffc8f29b469da1c4f5dbd32311665ec0ded8f508949243672b91bd600f84&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
