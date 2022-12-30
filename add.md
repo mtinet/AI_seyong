@@ -62,4 +62,15 @@ python kiosk.py
 - 하드웨어 세팅이 잘 되어 있지 않으면 결과물을 확인할 수 없음
 - 카메라 두 대의 위치와 각도, 결과물로 보여지는 y축의 정렬이 정확해야 원하는 값을 얻을 수 있으므로, 하드웨어 세팅이 매우 중요함  
 ![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/291fadee-88fa-448d-81c6-3d0405172606/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221230%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221230T014219Z&X-Amz-Expires=86400&X-Amz-Signature=a01cffc8f29b469da1c4f5dbd32311665ec0ded8f508949243672b91bd600f84&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1bf48fc7-5f63-4960-a798-1828c5b08f25/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221230%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221230T014756Z&X-Amz-Expires=86400&X-Amz-Signature=d76a2add47bc6cae78b0245c384120880aaacfee179adcf92df487b3af76543f&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a1a7d405-68f6-46df-9c02-ad75a7cc343a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221230%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221230T014817Z&X-Amz-Expires=86400&X-Amz-Signature=3bae274c20341c3e33a7c50702ef1aa548ce1e7d7c0eef3249aa360ed33c161d&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/977ab77d-9819-4727-9c4d-c43986b7acc8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221230%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221230T014904Z&X-Amz-Expires=86400&X-Amz-Signature=3a89834013ac13c7bf48bb215d71407ed46567bb3e9237e88f8c610e5e991400&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+- 서버에 표현되는 결과 로그에서 추정된 결과값 bpred의 값 아래쪽에 같은 상품명이 2개가 모두 찍혀야 해당 상품이 키오스크의 값으로 들어가게 설정되어 있음. 이는 오작동을 줄이기 위해 카메라를 2대를 세팅해서 각각 해당 카메라에 들어온 값이 온전하느냐를 판별하기 위함임  
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/67a8385e-1776-437d-aeb3-a867167b340c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221230%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221230T014925Z&X-Amz-Expires=86400&X-Amz-Signature=c01a2070607bcfe8681bc45a5861b6e20e8e4cb5cf5b269d2580b4f8a2e404b3&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
+
+### 7. 아두이노 코드가 설치되어 있는 폴더로 이동한다. 
+```cmd
+cd C:\<시스템이 설치되어 있는 주소>\AI_seyong-main\3. kiosk\doorOpenClose_python
+```
+안에 있는 doorOpenClose_python.ino 파일을 아두이노 IDE를 이용해 아두이노 우노보드에 업로드 하고, 인공지능 키오스크 클라이언트가 구동되는 컴퓨터에 USB케이블로 연결해 놓는다. 아두이노의 13번 핀을 이용해 여닫이 문에 설치된 릴레이를 제어하도록 코딩되어 있음.
