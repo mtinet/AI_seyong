@@ -100,7 +100,7 @@ cd C:\<시스템이 설치되어 있는 주소>\AI_seyong-main\3. kiosk
 - 다음 그림을 그 아래 그림의 형태로 주석 처리한 #을 삭제해주면 된다. 파이썬은 들여쓰기로 구문을 구분하므로 딱 #만 지워야 한다.  
 ![image](https://user-images.githubusercontent.com/13882302/210350792-4ed0632b-902f-40c9-b328-719350ac5a59.png)
 ![image](https://user-images.githubusercontent.com/13882302/210350848-57843563-208e-437b-ba4a-b0c3ef78376c.png)
-- 216번줄도 다음 그림과 같이 바꿔주고 저장한다.  
+- 216번줄도 다음 그림과 같이 바꿔주고 저장한다.(ser.write(val)부분)  
 ![image](https://user-images.githubusercontent.com/13882302/210351241-0f32afba-1ff2-4859-bed6-6b3da7de449b.png)
 ![image](https://user-images.githubusercontent.com/13882302/210351286-b64d5377-d68a-48ed-acf2-4979b00b1705.png)
 - 아두이노를 연결하지 않은 상태에서 위와 같이 주석을 해제하면 프로그램이 오류가 나므로, 꼭 여닫이 문을 제어할 때만 주석을 해제하고 사용한다. 
@@ -111,6 +111,12 @@ cd C:\<시스템이 설치되어 있는 주소>\AI_seyong-main\3. kiosk
 ```cmd
 python kiosk.py
 ```
+- 풀 스크린으로 세팅이 된 키오스크 창을 적당한 크키로 조정한다.  
+![image](https://user-images.githubusercontent.com/13882302/210353305-10b4750b-fc04-4f0c-a350-3b2afe40a5fc.png)
+- '상품 인식하기'버튼을 누르면 클라이언트의 cmd 창에서 다음과 같은 오류가 발생한다. 
+![image](https://user-images.githubusercontent.com/13882302/210353572-ab312c1a-0852-4639-bf38-ae8a7efe59c4.png)
+
+
 ### 6. 명령프롬프트 창의 위치를 적당히 조정하고, 클라이언트 프로그램에서 결제하기 버튼을 눌러 결과를 확인함
 #### 주의사항
 - 하드웨어 세팅이 잘 되어 있지 않으면 결과물을 확인할 수 없음
