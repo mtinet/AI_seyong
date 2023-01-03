@@ -1,10 +1,38 @@
 # 프로그램 설치 방법
 
+## 프로그램 다운로드
+- 아래 링크에서 프로그램을 다운로드 받는다. 
+[프로그램 다운로드]https://drive.google.com/file/d/1lKk5NDPP_T890f0dJTW6lMgdaqSoPFpP/view?usp=sharing)  
+- 원하는 곳에 압축을 푼다. 
+- 이 파일은 인공지능 학습을 위한 사진데이터를 모두 포함하고 있어 5기가 정도 용량이지만, 프로젝트를 위한 서버와 클라이언트는 부수적인 파일들은 필요하지 않다.  
+- 서버 파일은 3.kiosk 폴더의 smartM_ai_server 폴더 안에 있는 smartM_ai_server_new.py 파일있다.  
+- 클라이언트 파일은 3. kiosk 폴더에 kiosk.py 파일이다.  
+- 전자제어 여닫이 문을 제어하는 파일은 3. kiosk 폴더의 doorOpenClose_python 폴더 안에 있는 doorOpenClose_python.ino 파일이다. 
+- .py로 되어 있는 파일은 python으로 실행하고, .ino로 되어 있는 파일은 아두이노 IDE를 이용해 아두이노 우노보드에 업로드 하여 사용한다.  
+
+
 ## python 설치(3.8버전으로 설치할 것)
+- 아래 링크를 클릭해 python 3.8.10 버전을 다운로드 받고 설치한다.  
 [python 3.8.10 다운로드 링크](https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe)  
+- 설치 화면 하단의 Add Python 3.8 to PATH를 반드시 체크하고 Install Now버튼을 눌러 설치한다.  
+![image](https://user-images.githubusercontent.com/13882302/210344769-3c3108bf-fdfb-442d-9bef-95b968dac583.png)
+
+## cmd를 통한 폴더 이동
+![image](https://user-images.githubusercontent.com/13882302/210346348-55fc5098-b360-4945-b9ab-12275e734d1a.png)
+- 탐색기를 열어 서버가 설치되어 있는 폴더로 이동 한 다음 위 그림처럼 주소창을 클릭하고 해당 폴더의 주소를 복사한다.  
+![image](https://user-images.githubusercontent.com/13882302/210346494-8abfb3e2-b487-40a4-912f-c02180b50603.png)
+- 윈도우 왼쪽 하단의 검색창을 열고 cmd를 입력한다음 엔터를 눌러 명령 프롬프트를 연다.  
+![image](https://user-images.githubusercontent.com/13882302/210346603-1e19e823-5180-4676-90d8-e6c8a8135158.png)
+- 명령 프롬프트가 열리면 아래 예시의 형태로 cd 명령어를 써서 서버 폴더로 이동한다.  
+```cmd
+cd C:\<압축을 푼 위치>\AI_seyong-main\3. kiosk\smartM_ai_server
+```
+- dir명령어를 통해 해당 폴더에 들어있는 폴더와 파일을 볼 수 있다.  
 
 ## 기본 라이브러리 설치  
-(torch, torchvision을 최신 버전으로 설치하면 소스코드 일부를 수정해야 함)
+- 아래 명령어를 순서대로 입력하여 모두 설치한다.  
+- torch, torchvision을 최신 버전으로 설치하면 소스코드 일부를 수정해야 한다.  
+
 ```python
 python.exe -m pip install --upgrade pip
 pip install numpy
