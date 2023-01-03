@@ -149,8 +149,8 @@ pip show torch
 
 - 주석처리 전
 ![image](https://user-images.githubusercontent.com/13882302/210356251-46ee8eb7-18f3-4fa7-a7fb-ee4ac36a862f.png)
-- 주석처리 후
-![image](https://user-images.githubusercontent.com/13882302/210356315-37cf5010-8306-41ed-b6ff-25d459ab20ff.png)
+- 주석처리 후(주석처리 한 행의 마지막에 있는 괄호를 꼭 다음줄로 넘겨놓을 것. 그렇지 않으면 함께 주석처리되어 오류가 발생함)  
+![image](https://user-images.githubusercontent.com/13882302/210357409-084a5472-dd92-4d37-b743-f27758f5abca.png)
 
 - 서버와 클라이언트를 다시 실행한다.  
 
