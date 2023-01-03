@@ -23,11 +23,15 @@
 ![image](https://user-images.githubusercontent.com/13882302/210346494-8abfb3e2-b487-40a4-912f-c02180b50603.png)
 - 윈도우 왼쪽 하단의 검색창을 열고 cmd를 입력한다음 엔터를 눌러 명령 프롬프트를 연다.  
 ![image](https://user-images.githubusercontent.com/13882302/210346603-1e19e823-5180-4676-90d8-e6c8a8135158.png)
-- 명령 프롬프트가 열리면 아래 예시의 형태로 cd 명령어를 써서 서버 폴더로 이동한다.  
+- 명령 프롬프트가 열리면 아래 예시의 형태로 cd 명령어를 써서 서버 폴더로 이동한다. 위의 탐색기에서 복사한 주소를 붙여넣으면 된다.    
 ```cmd
 cd C:\<압축을 푼 위치>\AI_seyong-main\3. kiosk\smartM_ai_server
 ```
+- 폴더 이동이 잘 되면 아래 그림과 같은 형태로 폴더 위치를 확인할 수 있다.  
+![image](https://user-images.githubusercontent.com/13882302/210348019-f4787201-9dd5-4488-901a-81316cc7a73f.png)
 - dir명령어를 통해 해당 폴더에 들어있는 폴더와 파일을 볼 수 있다.  
+![image](https://user-images.githubusercontent.com/13882302/210348135-770e05e1-9ef4-437f-b92d-a33aff55e673.png)
+
 
 ## 기본 라이브러리 설치  
 - 아래 명령어를 순서대로 입력하여 모두 설치한다.  
