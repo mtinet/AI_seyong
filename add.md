@@ -113,8 +113,46 @@ python kiosk.py
 ```
 - 풀 스크린으로 세팅이 된 키오스크 창을 적당한 크키로 조정한다.  
 ![image](https://user-images.githubusercontent.com/13882302/210353305-10b4750b-fc04-4f0c-a350-3b2afe40a5fc.png)
-- '상품 인식하기'버튼을 누르면 클라이언트의 cmd 창에서 다음과 같은 오류가 발생한다. 
+- '상품 인식하기'버튼을 누르면 서버와 클라이언트의 cmd 창에서 다음과 같은 오류가 발생한다. 
+- 서버창  
+![image](https://user-images.githubusercontent.com/13882302/210353677-e0bb5f6e-9f38-4853-b18e-ba951fa1e811.png)
+
+- 클라이언트 창  
 ![image](https://user-images.githubusercontent.com/13882302/210353572-ab312c1a-0852-4639-bf38-ae8a7efe59c4.png)
+
+- 아래의 오류를 해결해줘야 제대로 사용할 수 있는데, 이것은 torch라는 인공지능 라이브러리가 업데이트 되면서 입력해줘야 하는 파라메터 숫자가 달라졌기 때문이다. 
+```
+'Upsample' object has no attribute 'recompute_scale_factor'
+```
+- 아래 링크를 참고하여 라이브러리의 파라메터를 수정하고 다시 실행해본다. 
+[참고자료 링크](https://iambeginnerdeveloper.tistory.com/183)  
+
+- cmd에서 아래 명령어를 이용해 torch라이브러리가 설치되어 있는 폴더를 확인한다. Location이라고 써 있는 곳이 그 위치이다.  
+```python 
+pip show torch
+```
+![image](https://user-images.githubusercontent.com/13882302/210355097-3b71e89c-6172-44ef-b2a4-33df4cc738d8.png)
+
+- 해당 주소를 복사하여 아래와 같이 탐색기를 열고 붙여넣은 다음 해당 폴더로 이동한다. 
+![image](https://user-images.githubusercontent.com/13882302/210355315-903679cf-8723-4095-a536-546f46d8dbbf.png)
+
+- 우리가 수정하려는 파일은 아래 그림의 위치에 있으므로 해당 폴더를 찾아가서 upsampling.py 파일을 찾아 atom 에디터로 연다.  
+![image](https://user-images.githubusercontent.com/13882302/210355432-ae701fad-7e43-4f4c-adff-3e7b0559d5b6.png)
+
+![image](https://user-images.githubusercontent.com/13882302/210355667-a1e41b29-d6a1-4435-9d6d-a53c3b172573.png)
+
+![image](https://user-images.githubusercontent.com/13882302/210355744-6842c20d-19f0-4f50-a59b-63ebbcc739a9.png)
+
+- 아래 그림의 하얀색 부분이 주석처리되면 정상적으로 동작하므로 atom에서 157번 줄을 찾아 해당 부분앞에 #을 붙여 주석처리하고 저장한다.  
+![image](https://user-images.githubusercontent.com/13882302/210355814-696bc854-17f9-48fa-b8ea-0d1a883a201e.png)
+![image](https://user-images.githubusercontent.com/13882302/210356168-f61c1810-d79f-440b-91db-a0bffe9b2334.png)
+
+- 주석처리 전
+![image](https://user-images.githubusercontent.com/13882302/210356251-46ee8eb7-18f3-4fa7-a7fb-ee4ac36a862f.png)
+- 주석처리 후
+![image](https://user-images.githubusercontent.com/13882302/210356315-37cf5010-8306-41ed-b6ff-25d459ab20ff.png)
+
+- 서버와 클라이언트를 다시 실행한다.  
 
 
 ### 6. 명령프롬프트 창의 위치를 적당히 조정하고, 클라이언트 프로그램에서 결제하기 버튼을 눌러 결과를 확인함
