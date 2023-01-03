@@ -54,6 +54,9 @@ pip install seaborn
 pip install wget
 pip install pyserial
 ```
+- 아래 그림처럼 전체를 드래그해서 복사하고, cmd 창에 넣으면 알아서 모두 설치한다.  
+![image](https://user-images.githubusercontent.com/13882302/210348797-5281a6b5-26df-41de-8054-6fc0c4cb8235.png)
+
 
 ## 옵션 라이브러리 설치(여기부터는 음성 추가용, 추후 옵션으로 사용할 예정)
 ```python
