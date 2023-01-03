@@ -62,7 +62,7 @@ pip install pyserial
 ![image](https://user-images.githubusercontent.com/13882302/210349039-02f28f40-de65-4fdb-b11a-beeb30a5ea00.png)
 
 
-## 옵션 라이브러리 설치(여기부터는 음성 추가용, 추후 옵션으로 사용할 예정)
+## 옵션 라이브러리 설치(여기부터는 음성 추가용, 추후 옵션으로 사용할 예정, 설치하지 않아도 됨)
 ```python
 pip install pip install speechrecognition
 pip install pip install gtts
@@ -77,7 +77,7 @@ pip install pip install playsound
 serial.serialutil.SerialException: could not open port '': FileNotFoundError(2, '지정된 경로를 찾을 수 없습니다.', None, 3)
 ```
 
-## cmd와 폴더 이동
+## 서버와 클라이언트 열기  
 ### 1. 윈도우 왼쪽 하단의 돋보기를 클릭하고 cmd를 쳐서 명령프롬프트를 연다.
 ### 2. 서버가 설치되어 있는 폴더로 이동한다. 
 ```cmd
@@ -87,6 +87,8 @@ cd C:\<시스템이 설치되어 있는 주소>\AI_seyong-main\3. kiosk\smartM_a
 ```cmd
 python smartM_ai_server_new.py
 ```
+- 아래와 같은 화면이 되면 서버가 잘 열려서 구동하고 있는 상태이다. 
+![image](https://user-images.githubusercontent.com/13882302/210349797-1ee05022-b02b-49d8-b396-c92cca10a5cb.png)
 
 ### 4. 다시 돋보기로 가서 cmd 명령어를 이용해 새로운 명령프롬프트를 연다.
 ### 5. 클라이언트가 설치되어 있는 폴더로 이동한다. 
@@ -94,7 +96,18 @@ python smartM_ai_server_new.py
 cd C:\<시스템이 설치되어 있는 주소>\AI_seyong-main\3. kiosk
 ```
 ### 5. 파이썬 프로그램으로 클라이언트를 연다
-현재 자동으로 문이 열리는 부분은 주석처리 되어 있으므로, 이 기능을 살리려면 아래 파이썬 프로그램의 28~36번째 줄, 216번 줄을 주석해제하고 사용할 것  
+- 현재 자동으로 문이 열리는 부분은 주석처리 되어 있으므로, 이 기능을 살리려면 아래 파이썬 프로그램의 28~36번째 줄, 216번 줄을 주석해제하고 사용한다.  
+- 다음 그림을 그 아래 그림의 형태로 주석 처리한 #을 삭제해주면 된다. 파이썬은 들여쓰기로 구문을 구분하므로 딱 #만 지워야 한다.  
+![image](https://user-images.githubusercontent.com/13882302/210350792-4ed0632b-902f-40c9-b328-719350ac5a59.png)
+![image](https://user-images.githubusercontent.com/13882302/210350848-57843563-208e-437b-ba4a-b0c3ef78376c.png)
+- 216번줄도 다음 그림과 같이 바꿔주고 저장한다.  
+![image](https://user-images.githubusercontent.com/13882302/210351241-0f32afba-1ff2-4859-bed6-6b3da7de449b.png)
+![image](https://user-images.githubusercontent.com/13882302/210351286-b64d5377-d68a-48ed-acf2-4979b00b1705.png)
+- 아두이노를 연결하지 않은 상태에서 위와 같이 주석을 해제하면 프로그램이 오류가 나므로, 꼭 여닫이 문을 제어할 때만 주석을 해제하고 사용한다. 
+- 코드 편집 프로그램은 다음 링크에서 다운로드 받은 atom 편집기를 사용하면 된다.  
+[atom.io다운로드](https://sourceforge.net/projects/atom.mirror/)
+
+- 문을 실제로 열기 위해서는 아두이노에 해당 프로그램을 업로드 하고, 릴레이를 설치해야 한다. 아두이노 부분은 아래에서 다시 설명한다.  
 ```cmd
 python kiosk.py
 ```
@@ -117,3 +130,5 @@ python kiosk.py
 cd C:\<시스템이 설치되어 있는 주소>\AI_seyong-main\3. kiosk\doorOpenClose_python
 ```
 안에 있는 doorOpenClose_python.ino 파일을 아두이노 IDE를 이용해 아두이노 우노보드에 업로드 하고, 인공지능 키오스크 클라이언트가 구동되는 컴퓨터에 USB케이블로 연결해 놓는다. 아두이노의 13번 핀을 이용해 여닫이 문에 설치된 릴레이를 제어하도록 코딩되어 있음.
+릴레이의 제어 핀은 아두이노와 다음과 같이 연결한다. 
+![image](https://user-images.githubusercontent.com/13882302/210350335-ede46b4e-0cc3-45fa-9cec-aab8f24f69ad.png)
