@@ -56,6 +56,10 @@ pip install pyserial
 ```
 - 아래 그림처럼 전체를 드래그해서 복사하고, cmd 창에 넣으면 알아서 모두 설치한다.  
 ![image](https://user-images.githubusercontent.com/13882302/210348797-5281a6b5-26df-41de-8054-6fc0c4cb8235.png)
+- 아래 그림은 설치 과정이다.  
+![image](https://user-images.githubusercontent.com/13882302/210348914-3b50d176-34f9-430d-9baf-badddf51f52f.png)
+- 각각의 라이브러리가 설치될 때마다 아래 그림처럼 Successfully installed ~~~ 라는 문구가 나온다.  
+![image](https://user-images.githubusercontent.com/13882302/210349039-02f28f40-de65-4fdb-b11a-beeb30a5ea00.png)
 
 
 ## 옵션 라이브러리 설치(여기부터는 음성 추가용, 추후 옵션으로 사용할 예정)
