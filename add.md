@@ -152,7 +152,7 @@ pip show torch
 - 주석처리 후(주석처리 한 행의 마지막에 있는 괄호를 꼭 다음줄로 넘겨놓을 것. 그렇지 않으면 함께 주석처리되어 오류가 발생함)  
 ![image](https://user-images.githubusercontent.com/13882302/210357409-084a5472-dd92-4d37-b743-f27758f5abca.png)
 
-- 서버와 클라이언트를 다시 실행한다.  
+- 서버와 클라이언트를 다시 실행하면 정상 동작 하는 것을 확인할 수 있다.  
 
 
 ### 6. 명령프롬프트 창의 위치를 적당히 조정하고, 클라이언트 프로그램에서 결제하기 버튼을 눌러 결과를 확인함
@@ -169,10 +169,39 @@ pip show torch
 
 
 ### 7. 여닫이 문을 자동제어 하려면, 아두이노 코드가 설치되어 있는 폴더로 이동한다. 
-현재 자동으로 문이 열리는 부분은 주석처리 되어 있으므로, 이 기능을 살리려면 kiosk.py 파이썬 프로그램의 28~36번째 줄, 216번 줄을 주석해제하고 사용할 것
+- 현재 자동으로 문이 열리는 부분은 주석처리 되어 있으므로, 이 기능을 살리려면 kiosk.py 파이썬 프로그램의 28~36번째 줄, 216번 줄을 주석해제하고 사용할 것
 ```cmd
 cd C:\<시스템이 설치되어 있는 주소>\AI_seyong-main\3. kiosk\doorOpenClose_python
 ```
-안에 있는 doorOpenClose_python.ino 파일을 아두이노 IDE를 이용해 아두이노 우노보드에 업로드 하고, 인공지능 키오스크 클라이언트가 구동되는 컴퓨터에 USB케이블로 연결해 놓는다. 아두이노의 13번 핀을 이용해 여닫이 문에 설치된 릴레이를 제어하도록 코딩되어 있음.
-릴레이의 제어 핀은 아두이노와 다음과 같이 연결한다. 
+- 아래 링크에서 아두이노 IDE를 다운로드 받는다.  
+[아두이노 IDE 다운로드](https://downloads.arduino.cc/arduino-1.8.19-windows.exe)  
+- 아두이노 코드가 들어 있는 폴더의 doorOpenClose_python.ino 파일을 아두이노 IDE를 이용해 연다. 잘 안될 경우 아두이노 IDE를 열고 아래 코드를 복사해서 붙여넣고 활용한다.  
+```arduino
+int input_data;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+  digitalWrite(13,LOW);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  if (Serial.available() > 0) {
+    input_data = Serial.read();
+    if(input_data == '1'){
+      Serial.println(input_data);
+      digitalWrite(13, HIGH); // led_on
+      delay(3000);
+      digitalWrite(13, LOW); // led_off
+    }
+  }
+}
+```
+
+- IDE의 툴 탭에서 보드를 아두이노 우노로, 포트를 아두이노 우노가 연결되어 있는 포트를 선택한다.  
+- 아두이노 우노보드에 업로드 하고, 인공지능 키오스크 클라이언트가 구동되는 컴퓨터에 USB케이블로 연결해 놓는다. 
+- 아두이노의 13번 핀을 이용해 여닫이 문에 설치된 릴레이를 제어하도록 코딩되어 있으므로 릴레이의 신호 핀에 아두이노의 13번 핀을 연결한다.  
+- 아래 이미지를 참고한다.   
 ![image](https://user-images.githubusercontent.com/13882302/210350335-ede46b4e-0cc3-45fa-9cec-aab8f24f69ad.png)
