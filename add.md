@@ -2,7 +2,7 @@
 
 ## 프로그램 다운로드
 - 아래 링크에서 프로그램을 다운로드 받는다. 
-[프로그램 다운로드]https://drive.google.com/file/d/1lKk5NDPP_T890f0dJTW6lMgdaqSoPFpP/view?usp=sharing)  
+[프로그램 다운로드](https://drive.google.com/file/d/1lKk5NDPP_T890f0dJTW6lMgdaqSoPFpP/view?usp=sharing)  
 - 원하는 곳에 압축을 푼다. 
 - 이 파일은 인공지능 학습을 위한 사진데이터를 모두 포함하고 있어 5기가 정도 용량이지만, 프로젝트를 위한 서버와 클라이언트는 부수적인 파일들은 필요하지 않다.  
 - 서버 파일은 3.kiosk 폴더의 smartM_ai_server 폴더 안에 있는 smartM_ai_server_new.py 파일있다.  
