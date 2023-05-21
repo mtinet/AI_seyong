@@ -1,0 +1,1 @@
+python smartM_ai_server.py
